@@ -1,5 +1,5 @@
 const Expenses = () => {
-    return <div>I'm Expenses</div>
+    return <div>I&apos;m Expenses</div>
 }
 
 export default Expenses
