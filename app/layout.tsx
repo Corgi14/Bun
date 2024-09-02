@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import Head from 'next/head'
 import './globals.css'
 
 type LayoutProps = {
     children: React.ReactNode
 }
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -16,7 +14,13 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<LayoutProps>) => {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1, width=device-width"
+                />
+            </Head>
+            <body>{children}</body>
         </html>
     )
 }
